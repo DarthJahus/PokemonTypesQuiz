@@ -30,9 +30,17 @@ th, td {
     height: 50%;
     border: 1px solid #FFF;
     cursor: pointer;
-	visibility: hidden;
 }
 
 .btn-answer:focus {
     outline: none;
+}
+
+.hidden {
+	/* visibility: hidden; */
+	visibility: hidden;
+}
+
+.btn-unhide {
+	user-select: none;
 }

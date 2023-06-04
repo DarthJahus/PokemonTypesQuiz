@@ -17,15 +17,14 @@
             <tr>
                 <th>{{ offensive_type }}</th>
                 {% for defensive_type in pokemon_types %}
-                    <td id="cell-{{ offensive_type }}-{{ defensive_type }}"
-					class="cell">
-					<button id="{{ offensive_type }}-{{ defensive_type }} "
+                  <td id="cell-{{ offensive_type }}-{{ defensive_type }}" class="cell">
+					<button id="{{ offensive_type }}-{{ defensive_type }}"
 							style="background-color: {{ type_effectiveness[offensive_type][loop.index0] }};"
-							class="btn-answer {{ offensive_type }}">
+							class="btn-answer {{ offensive_type }} hidden">
 					</button>
-				</td>
+				  </td>
                 {% endfor %}
-                <td><button id="unhide-{{ offensive_type }}">Unhide</button></td>
+                <td><button id="unhide-{{ offensive_type }}" class="btn-unhide">Unhide</button></td>
             </tr>
         {% endfor %}
     </table>
