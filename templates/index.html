@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Pokemon Type Interactions</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <table>
+        <tr>
+            <th></th>
+            {% for defensive_type in pokemon_types %}
+                <th>{{ defensive_type }}</th>
+            {% endfor %}
+        </tr>
+        {% for offensive_type in pokemon_types %}
+            <tr>
+                <th>{{ offensive_type }}</th>
+                {% for defensive_type in pokemon_types %}
+                    <td id="cell-{{ offensive_type }}-{{ defensive_type }}"
+					class="cell">
+					<button id="{{ offensive_type }}-{{ defensive_type }} "
+							style="background-color: {{ type_effectiveness[offensive_type][loop.index0] }};"
+							class="btn-answer {{ offensive_type }}">
+					</button>
+				</td>
+                {% endfor %}
+                <td><button id="unhide-{{ offensive_type }}">Unhide</button></td>
+            </tr>
+        {% endfor %}
+    </table>
+    <script src="{{ url_for('static', filename='main.js') }}"></script>
+</body>
+</html>
