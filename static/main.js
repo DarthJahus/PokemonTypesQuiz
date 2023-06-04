@@ -17,14 +17,14 @@ document.addEventListener('DOMContentLoaded', (event) => {
             });
         });
 
-        pokemonTypes.forEach(otherType => {
-            let button = document.getElementById(`${type}-${otherType}`);
-            button.style.backgroundColor = 'white';
-            colorIndex[`${type}-${otherType}`] = 0;
-            button.addEventListener('click', () => {
-                colorIndex[`${type}-${otherType}`] = (colorIndex[`${type}-${otherType}`] + 1) % colors.length;
-                button.style.backgroundColor = colors[colorIndex[`${type}-${otherType}`]];
-            });
-        });
+		pokemonTypes.forEach(otherType => {
+			let cell = document.getElementById(`cell-${type}-${otherType}`);
+				cell.style.backgroundColor = 'white';
+				colorIndex[`${type}-${otherType}`] = 0;
+				cell.addEventListener('click', () => {
+					colorIndex[`${type}-${otherType}`] = (colorIndex[`${type}-${otherType}`] + 1) % colors.length;
+					cell.style.backgroundColor = colors[colorIndex[`${type}-${otherType}`]];
+				});
+			});
     });
 });
