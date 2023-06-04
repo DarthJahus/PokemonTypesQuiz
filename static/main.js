@@ -1,12 +1,9 @@
 document.addEventListener('DOMContentLoaded', (event) => {
-    let pokemonTypes = [
-        "Normal", "Fire", "Water", "Electric", "Grass", "Ice", "Fighting",
-        "Poison", "Ground", "Flying", "Psychic", "Bug", "Rock", "Ghost",
-        "Dragon", "Dark", "Steel", "Fairy"
-    ];
+    let pokemonTypes = ['Normal', 'Fighting', 'Flying', 'Poison', 'Ground', 'Rock', 'Bug', 'Ghost', 'Steel', 'Fire', 'Water', 'Grass', 'Electric', 'Psychic', 'Ice', 'Dragon', 'Dark', 'Fairy'];
 
     let colorIndex = {};
     let colors = ['white', 'green', 'red', 'blue', 'grey'];
+	// let colors = ['grey', 'white', 'green', 'red', 'black'];
 
     pokemonTypes.forEach(type => {
         let btnUnhide = document.getElementById(`unhide-${type}`);
@@ -19,7 +16,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
 
 		pokemonTypes.forEach(otherType => {
 			let cell = document.getElementById(`cell-${type}-${otherType}`);
-				cell.style.backgroundColor = 'white';
+				cell.style.backgroundColor = 'white'; // 'lightgrey';
 				colorIndex[`${type}-${otherType}`] = 0;
 				cell.addEventListener('click', () => {
 					colorIndex[`${type}-${otherType}`] = (colorIndex[`${type}-${otherType}`] + 1) % colors.length;
