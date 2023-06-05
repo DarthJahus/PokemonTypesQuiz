@@ -43,6 +43,7 @@ th, td {
 
 .btn-unhide {
 	user-select: none;
+	width: 60px;
 }
 
 .expandable-text {

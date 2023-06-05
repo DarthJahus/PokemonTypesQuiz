@@ -9,9 +9,14 @@ document.addEventListener('DOMContentLoaded', (event) => {
         let btnUnhide = document.getElementById(`unhide-${type}`);
         btnUnhide.addEventListener('click', () => {
             pokemonTypes.forEach(otherType => {
-                let button = document.getElementById(`${type}-${otherType}`);
-                button.classList.remove('hidden');
+                let answer = document.getElementById(`${type}-${otherType}`);
+                answer.classList.toggle('hidden');
             });
+            if (btnUnhide.textContent === "Unhide") {
+                btnUnhide.textContent = "Hide";
+            } else {
+                btnUnhide.textContent = "Unhide";
+            }
         });
 
 		pokemonTypes.forEach(otherType => {
