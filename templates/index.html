@@ -21,6 +21,27 @@
     <link rel="icon" href="{{ url_for('static', filename='favicon.svg') }}">
 </head>
 <body>
+    <h1>Pokémon Type Effectiveness grid quiz</h1>
+    <div class="expandable-text">
+        Welcome to this simple Pokémon Type Effectiveness grid quiz! Put your Pokémon battle skills to the test. In the world of Pokémon, understanding type effectiveness is crucial for building a winning team and strategizing your moves. With this interactive grid, you'll have the opportunity to showcase your knowledge by determining the impact of attacking types against defending types.
+        <div id="more" style="display: none;">
+            <br/>The grid is organized with offensive types listed as rows and defensive types as columns.<br/>
+            Click on each cell in the grid and choose the corresponding color to indicate the effectiveness of the attack.<br/>
+            <ul>
+                <li><span class="littlebox" style="background-color: green;"></span> Green signifies normal damage (×1)</li>
+                <li><span class="littlebox" style="background-color: red;"></span> Red represents super effectiveness (×2)</li>
+                <li><span class="littlebox" style="background-color: blue;"></span> Blue indicates not very effectiveness (×½)</li>
+                <li><span class="littlebox" style="background-color: grey;"></span> Grey represents no effect (×0)</li>
+            </ul>
+            Challenge yourself to complete the Pokémon Type Effectiveness grid and see if you can accurately predict how different types interact with one another. Whether you're a seasoned Pokémon trainer or just starting your journey, this quiz offers a an interactive way to test your knowledge.<br/>
+            <h2>Support or contribute to the "project"</h2>
+            <ul>
+                <li>If you want to show some support, check out <a href="https://twitch.tv/SayuraPlays" title="Sayura is streaming Pokémon games on Twitch">Sayura Plays Twitch channel</a>, subscribe or share it. She streams Pokémon, in French, weekly. Oh, and check out my <a href="https://jahus.net" title="Jahus' blog">blog</a>… for stuff.</li>
+                <li>Want to contribute? First, know that this is no project. You can fork the code on <a href="https://github.com/DarthJahus/PokemonTypesQuiz" title="Pokémon Types Quiz on GitHub, by DarthJahus">GitHub</a> and even ask for a pull request. You can also host the "app". The code has no licence.</li>
+            </ul>
+        </div>
+    </div>
+    <a href="#" id="read-more-link" onclick="toggleText(event)">Read more</a>
     <table>
         <tr>
             <th></th>

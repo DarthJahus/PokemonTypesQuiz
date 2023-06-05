@@ -25,3 +25,21 @@ document.addEventListener('DOMContentLoaded', (event) => {
 			});
     });
 });
+
+function toggleText(event) {
+  event.preventDefault();
+  var moreText = document.getElementById("more");
+  var linkText = document.getElementById("read-more-link");
+
+  var expandableText = document.querySelector(".expandable-text");
+
+  if (moreText.style.display === "none") {
+    moreText.style.display = "inline";
+    linkText.innerHTML = "Collapse";
+    expandableText.style.maxHeight = "none";
+  } else {
+    moreText.style.display = "none";
+    linkText.innerHTML = "Read more";
+    expandableText.style.maxHeight = "60px";
+  }
+}

@@ -44,3 +44,25 @@ th, td {
 .btn-unhide {
 	user-select: none;
 }
+
+.expandable-text {
+  width: 962px;
+  max-height: 60px;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+  border: solid;
+  border-width: thin;
+  background-color: #EEE;
+  padding: 10px;
+}
+
+#read-more-link {
+  display: inline-block;
+  margin-top: 5px;
+}
+
+.littlebox {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+}
