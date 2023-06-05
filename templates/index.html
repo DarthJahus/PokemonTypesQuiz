@@ -3,7 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <title>Pokemon Type Interactions</title>
+    <!-- Meta -->
+    <meta name="description" content="Test your Pokémon knowledge with this interactive Pokémon Type Effectiveness grid quiz! Determine the effectiveness of attacking against defending types. Explore the grid, change colors and discover if your move is super effective, not very effective, or have no effect" />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:site" content="@DarthJahus" />
+    <meta name="twitter:creator" content="@DarthJahus" />
+    <meta property="og:image" content="{{ url_for('static', filename='Charizard-AI.jpg') }}" />
+    <meta property="og:image:secure_url" content="{{ url_for('static', filename='Charizard-AI.jpg') }}" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="An AI-generated photography of the Pokémon Charizard flying over an icy lake. By day, with sunlight." />
+    <meta property="og:image:type" content="image/jpeg" />
+    <meta name="twitter:label1" content="Created by" />
+    <meta name="twitter:data1" content="Jahus" />
+    <!-- endMeta -->
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="icon" href="{{ url_for('static', filename='favicon.svg') }}">
 </head>
 <body>
     <table>
