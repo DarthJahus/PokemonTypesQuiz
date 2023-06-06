@@ -58,7 +58,7 @@ th:focus {
 
 .expandable-text {
   width: 967px;
-  max-height: 60px;
+  max-height: 55px;
   overflow: hidden;
   transition: max-height 0.3s ease;
   border: 1px solid #F7F7F7;
@@ -81,11 +81,11 @@ th:focus {
 }
 
 .highlight-atk {
-  background-color: cyan;
+  background-color: LightSkyBlue;
   font-weight: bold;
 }
 
 .highlight-def {
-  background-color: yellow;
+  background-color: orange;
   font-weight: bold;
 }

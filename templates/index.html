@@ -24,8 +24,8 @@
     <h1>Pokémon Type Effectiveness grid quiz</h1>
     <div class="expandable-text">
         Welcome to this simple Pokémon Type Effectiveness grid quiz! Put your Pokémon battle skills to the test. In the world of Pokémon, understanding type effectiveness is crucial for building a winning team and strategizing your moves. With this interactive grid, you'll have the opportunity to showcase your knowledge by determining the impact of attacking types against defending types.
+        <br/>The grid is organized with <span class="littlebox" style="background-color: orange;"></span> offensive types listed as rows and <span class="littlebox" style="background-color: LightSkyBlue;"></span> defensive types as columns.<br/>
         <div id="more" style="display: none;">
-            <br/>The grid is organized with offensive types listed as rows and defensive types as columns.<br/>
             Click on each cell in the grid and choose the corresponding color to indicate the effectiveness of the attack.<br/>
             <ul>
                 <li><span class="littlebox" style="background-color: green;"></span> Green signifies normal damage (×1)</li>
@@ -65,6 +65,7 @@
             </tr>
         {% endfor %}
     </table>
+    <br/>
     <script src="{{ url_for('static', filename='main.js') }}"></script>
 </body>
 </html>
