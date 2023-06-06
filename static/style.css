@@ -39,6 +39,11 @@ th, td {
     outline: none;
 }
 
+td:focus,
+th:focus {
+    outline: none;
+}
+
 .hidden {
 	visibility: hidden;
 }

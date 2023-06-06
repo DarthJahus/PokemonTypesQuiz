@@ -2,7 +2,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
     let pokemonTypes = ['Normal', 'Fighting', 'Flying', 'Poison', 'Ground', 'Rock', 'Bug', 'Ghost', 'Steel', 'Fire', 'Water', 'Grass', 'Electric', 'Psychic', 'Ice', 'Dragon', 'Dark', 'Fairy'];
 
     let colorIndex = {};
-    let colors = ['white', 'green', 'red', 'blue', 'grey'];
+    let colors = ['#F7F7F7', 'green', 'red', 'blue', 'grey'];
 	// let colors = ['grey', 'white', 'green', 'red', 'black'];
 
     pokemonTypes.forEach(type => {
