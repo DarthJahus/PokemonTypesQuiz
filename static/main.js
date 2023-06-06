@@ -8,12 +8,15 @@ document.addEventListener('DOMContentLoaded', (event) => {
     pokemonTypes.forEach(type => {
         let btnUnhide = document.getElementById(`unhide-${type}`);
         btnUnhide.addEventListener('click', () => {
+            let score = 0;
             pokemonTypes.forEach(otherType => {
                 let answer = document.getElementById(`${type}-${otherType}`);
                 answer.classList.toggle('hidden');
+                let cell = document.getElementById(`cell-${type}-${otherType}`);
+                if (answer.style.backgroundColor === cell.style.backgroundColor) {score++;};
             });
             if (btnUnhide.textContent === "Unhide") {
-                btnUnhide.textContent = "Hide";
+                btnUnhide.textContent = `${score} / 18 (Hide)`;
             } else {
                 btnUnhide.textContent = "Unhide";
             }
@@ -30,11 +33,32 @@ document.addEventListener('DOMContentLoaded', (event) => {
 			});
     });
 
-    let cells = document.getElementsByClassName("cell");
+    let cells = document.getElementsByClassName('cell');
     for (let i = 0; i < cells.length; i++) {
-        cells[i].addEventListener("mouseover", highlightHeaders);
-        cells[i].addEventListener("mouseout", removeHighlightHeaders);
-    }
+        cells[i].addEventListener('mouseover', highlightHeaders);
+        cells[i].addEventListener('mouseout', removeHighlightHeaders);
+    };
+
+    let btnScore = document.getElementById(`btnScore`);
+    btnScore.addEventListener('click', () => {
+        if (btnScore.textContent === 'Show score') {
+            let score = 0;
+            pokemonTypes.forEach(type => {
+                pokemonTypes.forEach(otherType => {
+                    let answer = document.getElementById(`${type}-${otherType}`);
+                    let cell = document.getElementById(`cell-${type}-${otherType}`);
+                    if (answer.style.backgroundColor === cell.style.backgroundColor) {
+                        score++;
+                    };
+                });
+            });
+            let scorePercentage = ((score / 384) * 100).toFixed(2);
+            btnScore.textContent = `${score} / 384 (${scorePercentage}%)`;
+        } else {
+            btnScore.textContent = 'Show score';
+        };
+    });
+
 });
 
 function toggleText(event) {
@@ -51,7 +75,7 @@ function toggleText(event) {
   } else {
     moreText.style.display = "none";
     linkText.innerHTML = "Read more";
-    expandableText.style.maxHeight = "60px";
+    expandableText.style.maxHeight = "55px";
   }
 }
 
