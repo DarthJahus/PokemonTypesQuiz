@@ -29,6 +29,12 @@ document.addEventListener('DOMContentLoaded', (event) => {
 				});
 			});
     });
+
+    let cells = document.getElementsByClassName("cell");
+    for (let i = 0; i < cells.length; i++) {
+        cells[i].addEventListener("mouseover", highlightHeaders);
+        cells[i].addEventListener("mouseout", removeHighlightHeaders);
+    }
 });
 
 function toggleText(event) {
@@ -47,4 +53,19 @@ function toggleText(event) {
     linkText.innerHTML = "Read more";
     expandableText.style.maxHeight = "60px";
   }
+}
+
+function highlightHeaders() {
+    let parentRow = this.parentNode;
+    let cellIndex = Array.prototype.indexOf.call(parentRow.children, this);
+    let headers = document.getElementsByTagName("th");
+    headers[cellIndex].classList.add("highlight-atk");
+    parentRow.cells[0].classList.add("highlight-def");
+}
+function removeHighlightHeaders() {
+    let headers = document.getElementsByTagName("th");
+    for (let i = 0; i < headers.length; i++) {
+        headers[i].classList.remove("highlight-atk");
+        headers[i].classList.remove("highlight-def");
+    }
 }

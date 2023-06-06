@@ -67,3 +67,13 @@ th, td {
   width: 10px;
   height: 10px;
 }
+
+.highlight-atk {
+  background-color: cyan;
+  font-weight: bold;
+}
+
+.highlight-def {
+  background-color: yellow;
+  font-weight: bold;
+}
