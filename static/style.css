@@ -11,12 +11,14 @@ th, td {
     width: 50px;
     height: 50px;
     text-align: center;
-    border: 1px solid #000;
+    border: 1px solid #F7F7F7;
 	font-size: 12px;
 	cursor: pointer;
 	aspect-ratio: 1/1;
 	box-sizing: border-box;
 	user-select: none;
+	background: #EEE;
+	border-radius: 5px;
 }
 
 .cell {
@@ -30,6 +32,7 @@ th, td {
     height: 50%;
     border: 1px solid #FFF;
     cursor: pointer;
+    border-radius: 5px;
 }
 
 .btn-answer:focus {
@@ -37,24 +40,27 @@ th, td {
 }
 
 .hidden {
-	/* visibility: hidden; */
 	visibility: hidden;
 }
 
 .btn-unhide {
 	user-select: none;
 	width: 60px;
+	border: 1px solid #F7F7F7;
+	border-radius: 5px;
+	background: #EEE;
 }
 
 .expandable-text {
-  width: 962px;
+  width: 967px;
   max-height: 60px;
   overflow: hidden;
   transition: max-height 0.3s ease;
-  border: solid;
+  border: 1px solid #F7F7F7;
   border-width: thin;
-  background-color: #EEE;
+  background: #EEE;
   padding: 10px;
+  border-radius: 5px;
 }
 
 #read-more-link {
@@ -66,6 +72,7 @@ th, td {
   display: inline-block;
   width: 10px;
   height: 10px;
+  border-radius: 2px;
 }
 
 .highlight-atk {

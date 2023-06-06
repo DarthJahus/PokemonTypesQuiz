@@ -53,10 +53,11 @@
             <tr>
                 <th>{{ offensive_type }}</th>
                 {% for defensive_type in pokemon_types %}
-                  <td id="cell-{{ offensive_type }}-{{ defensive_type }}" class="cell">
+                  <td id="cell-{{ offensive_type }}-{{ defensive_type }}" class="cell" tabindex="-1">
 					<button id="{{ offensive_type }}-{{ defensive_type }}"
 							style="background-color: {{ type_effectiveness[offensive_type][loop.index0] }};"
-							class="btn-answer {{ offensive_type }} hidden">
+							class="btn-answer {{ offensive_type }} hidden"
+                            tabindex="-1">
 					</button>
 				  </td>
                 {% endfor %}

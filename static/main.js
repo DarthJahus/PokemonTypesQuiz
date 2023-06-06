@@ -21,7 +21,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
 
 		pokemonTypes.forEach(otherType => {
 			let cell = document.getElementById(`cell-${type}-${otherType}`);
-				cell.style.backgroundColor = 'white'; // 'lightgrey';
+				cell.style.backgroundColor = '#F7F7F7'; // 'lightgrey';
 				colorIndex[`${type}-${otherType}`] = 0;
 				cell.addEventListener('click', () => {
 					colorIndex[`${type}-${otherType}`] = (colorIndex[`${type}-${otherType}`] + 1) % colors.length;
