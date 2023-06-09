@@ -52,8 +52,8 @@ document.addEventListener('DOMContentLoaded', (event) => {
                     };
                 });
             });
-            let scorePercentage = ((score / 384) * 100).toFixed(2);
-            btnScore.textContent = `${score} / 384 (${scorePercentage}%)`;
+            let scorePercentage = ((score / 324) * 100).toFixed(2);
+            btnScore.textContent = `${score} / 324 (${scorePercentage}%)`;
         } else {
             btnScore.textContent = 'Show score';
         };
